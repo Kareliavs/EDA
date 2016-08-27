@@ -125,30 +125,13 @@ void c_BinTRee<Tr>::convert(c_Node<T> *pp)
 ///romper el enlace con el padre
   ///mover los punteros y hacer lo mismo con el subarbol
     c_Node<T>** p;
-    c_Node<T>** p;
+    c_Node<T>** o;
     if(pp!=nullptr)
     {
     for(p=&((*p)->m_child[0]); (*p)->m_child[0]; p=&((*p)->m_child[0]));
-        if(((*p)->m_child[1]))
-//        (*p)->m_data=temp->m_data;
-    inorden(p->m_child[0]);
-
+        if(((*p)->m_child[1])){}
+       // convert(**p);
     }
-    /*
-    c_Node<T>** p;
-    c_Node<T>* temp;
-
-    if(!find(x,p)) return 0;
-    temp=(*p);
-    if((*p)->m_child[0] && (*p)->m_child[1])
-    {//caso2
-
-        for(p=&((*p)->m_child[0]); (*p)->m_child[1]; p=&((*p)->m_child[1]));
-        (*p)->m_data=temp->m_data;//No needed swap
-    }
-    (*p)=(*p)->m_child[!(*p)->m_child[0]];
-    return 1;
-*/
 }
 
 template<class Tr>
